@@ -128,6 +128,9 @@ const HealthCare = () => {
       await tx.wait();
       await fetchPatientRecords();
       alert("Record is added");
+      setDiagnosis('');
+    setTreatment('');
+    setPatientID('');
     } catch (error) {
       console.error(error);
     }
@@ -139,6 +142,7 @@ const HealthCare = () => {
         const tr = await contract.addAuthorizeProvider(providerAddress);
         await tr.wait();
         alert('Provider authorised successfully');
+        SetProviderAdress('');
       } catch (error) {
         console.error(error);
       }
