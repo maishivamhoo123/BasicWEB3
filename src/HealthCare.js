@@ -1,5 +1,6 @@
 import { Contract, ethers } from "ethers";
 import React, { useState, useEffect } from "react";
+import "./HealthCare.css";
 
 const HealthCare = () => {
   const [account, setAccount] = useState(null);
